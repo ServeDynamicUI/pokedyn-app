@@ -68,7 +68,7 @@ class _MyAppState extends State<MyApp> {
                 sendTimeout: const Duration(seconds: 5),
                 receiveTimeout: const Duration(seconds: 5),
               ),
-              templateJsonPath: 'assets/json/auth_loader.json',
+              templateJsonPath: 'assets/json/logout_loader.json',
             );
           },
           onAuthenticationInProgress: () {
