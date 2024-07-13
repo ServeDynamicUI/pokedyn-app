@@ -30,7 +30,7 @@ class PokemonDetailPageEndpoint extends Endpoint {
     Map<String, dynamic> pageJsonData = jsonDecode(
       jsonDecode(page!.pageData
           .replaceAll("{POKEMON_ID}", _formatId(pokemonId))
-          .replaceAll("{LINEAR_GRADIENT_AS_PER_POKEMON_MAIN_TYPE}", _getPokemonTypeGradient(pokemonDetail!['types'][0]))),
+          .replaceAll("{LINEAR_GRADIENT_AS_PER_POKEMON_MAIN_TYPE}", Util.getPokemonTypeGradient(pokemonDetail!['types'][0]))),
     );
 
     List<PageWidgetMapping>? pageWidgetMappingList = await PageWidgetMapping.db.find(session, where: (table) => table.pageId.equals(page.pageId));
@@ -176,7 +176,7 @@ class PokemonDetailPageEndpoint extends Endpoint {
     String pokemonCard1 = pokemonCarouselCardJsonString;
     String pokemonCard2 = pokemonCarouselCardJsonString;
 
-    String mainType = _getPokemonTypeGradient(pokemonDetail!['types'][0]);
+    String mainType = Util.getPokemonTypeGradient(pokemonDetail!['types'][0]);
 
     Map<String, dynamic> pokemonCardJson1 = Util.getMapFromString(pokemonCard1
         .replaceAll("{LINEAR_GRADIENT_AS_PER_TYPE}", mainType)
@@ -198,51 +198,6 @@ class PokemonDetailPageEndpoint extends Endpoint {
 
   String _formatId(String id) {
     return '#${id.padLeft(4, '0')}';
-  }
-
-  String _getPokemonTypeGradient(String type) {
-    switch (type) {
-      case 'normal':
-        return '-1.0,0.0;1.0,0.0;0xFF8E8E8E,0xFFC0C0C0'; // Grey to Silver
-      case 'fire':
-        return '-1.0,0.0;1.0,0.0;0xFFFF4500,0xFFFFA500'; // Orange Red to Orange
-      case 'water':
-        return '-1.0,0.0;1.0,0.0;0xFF1E90FF,0xFF00BFFF'; // Dodger Blue to Deep Sky Blue
-      case 'electric':
-        return '-1.0,0.0;1.0,0.0;0xFFFFD700,0xFFFFFF00'; // Gold to Yellow
-      case 'grass':
-        return '-1.0,0.0;1.0,0.0;0xFF32CD32,0xFF98FB98'; // Lime Green to Pale Green
-      case 'ice':
-        return '-1.0,0.0;1.0,0.0;0xFF00CED1,0xFFAFEEEE'; // Dark Turquoise to Pale Turquoise
-      case 'fighting':
-        return '-1.0,0.0;1.0,0.0;0xFF8B0000,0xFFFF6347'; // Dark Red to Tomato
-      case 'poison':
-        return '-1.0,0.0;1.0,0.0;0xFF800080,0xFFDDA0DD'; // Purple to Plum
-      case 'ground':
-        return '-1.0,0.0;1.0,0.0;0xFFD2B48C,0xFFF5DEB3'; // Tan to Wheat
-      case 'flying':
-        return '-1.0,0.0;1.0,0.0;0xFF87CEEB,0xFFB0E0E6'; // Sky Blue to Powder Blue
-      case 'psychic':
-        return '-1.0,0.0;1.0,0.0;0xFFFF69B4,0xFFFFB6C1'; // Hot Pink to Light Pink
-      case 'bug':
-        return '-1.0,0.0;1.0,0.0;0xFF6B8E23,0xFFADFF2F'; // Olive Drab to Green Yellow
-      case 'rock':
-        return '-1.0,0.0;1.0,0.0;0xFF8B4513,0xFFD2B48C'; // Saddle Brown to Tan
-      case 'ghost':
-        return '-1.0,0.0;1.0,0.0;0xFF4B0082,0xFF9370DB'; // Indigo to Medium Purple
-      case 'dragon':
-        return '-1.0,0.0;1.0,0.0;0xFF00008B,0xFF4169E1'; // Dark Blue to Royal Blue
-      case 'dark':
-        return '-1.0,0.0;1.0,0.0;0xFF000000,0xFF696969'; // Black to Dim Gray
-      case 'steel':
-        return '-1.0,0.0;1.0,0.0;0xFFB0C4DE,0xFF778899'; // Light Steel Blue to Slate Gray
-      case 'fairy':
-        return '-1.0,0.0;1.0,0.0;0xFFFFC0CB,0xFFFFB6C1'; // Pink to Light Pink
-      case 'shadow':
-        return '-1.0,0.0;1.0,0.0;0xFF2F4F4F,0xFF696969'; // Dark Slate Gray to Dim Gray
-      default:
-        return '-1.0,0.0;1.0,0.0;0xFFA8A878,0xFFD3D3D3'; // Default: Khaki to Light Gray
-    }
   }
 
   Future<Map<String, dynamic>> _fetchPokemonData(String pokemonId) async {
