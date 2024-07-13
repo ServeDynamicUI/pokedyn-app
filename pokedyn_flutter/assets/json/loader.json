@@ -1,0 +1,29 @@
+{
+  "type": "dy_scaffold",
+  "data": {
+    "key": "123456",
+    "scrollable": false,
+    "mainAxisAlignment": "center",
+    "appBar": {
+      "pageTitle": "Pokedyn",
+      "appBarGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC"
+    },
+    "children": [{
+      "type": "dy_container",
+      "height": -1,
+      "data": {
+        "key": "123123",
+        "alignment": "center",
+        "margin": "10",
+        "child": {
+          "type": "dy_loader",
+          "data": {
+            "key": "13131",
+            "mainAxisAlignment": "center",
+            "loadingText": "Loading Pokemon Data..."
+          }
+        }
+      }
+    }]
+  }
+}

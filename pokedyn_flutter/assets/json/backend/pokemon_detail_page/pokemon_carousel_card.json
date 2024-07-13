@@ -1,0 +1,22 @@
+{
+  "type": "dy_card",
+  "data": {
+    "key": "{KEY_1}",
+    "margin": "10",
+    "padding": "10",
+    "elevation": 10,
+    "linearGradient": "{LINEAR_GRADIENT_AS_PER_TYPE}",
+    "borderRadius": 20,
+    "child": {
+      "type": "dy_image",
+      "data": {
+        "key": "{KEY_2}",
+        "src": "{POKEMON_OFFICIAL_ARTWORK_PNG_URL}",
+        "width": 450,
+        "imageType": "network",
+        "fit": "fill",
+        "placeholderImagePath": "assets/images/ic_pokemon_placeholder.png"
+      }
+    }
+  }
+}

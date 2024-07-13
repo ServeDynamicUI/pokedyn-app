@@ -1,0 +1,18 @@
+{
+  "type": "dy_carousel",
+  "data": {
+    "key": "{KEY_1}",
+    "reusable": true,
+    "carouselOptions": {
+      "autoPlay": true,
+      "enlargeCenterPage": true,
+      "scrollDirection": "horizontal",
+      "reverse": false,
+      "enableInfiniteScroll": false,
+      "viewportFraction": 1,
+      "height": 300
+    },
+    "children": [
+    ]
+  }
+}

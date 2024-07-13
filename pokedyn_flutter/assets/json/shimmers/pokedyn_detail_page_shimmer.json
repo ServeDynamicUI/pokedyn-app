@@ -1,0 +1,368 @@
+{
+  "type": "dy_scaffold",
+  "data": {
+    "key": "default_page_shimmer",
+    "crossAxisAlignment": "start",
+    "appBar": {
+      "pageTitle": "Pokemon Info",
+      "appBarGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC",
+      "rightActions": [
+        {
+          "type": "dy_text",
+          "data": {
+            "key": "243535345",
+            "text": "#0001",
+            "margin": "10,0",
+            "style": {
+              "color": "0xff808080",
+              "fontWeight": "bold",
+              "fontSize": 15
+            }
+          }
+        }
+      ]
+    },
+    "padding": "20,10,20,20",
+    "itemsSpacing": 10,
+    "height": -1,
+    "backgroundColor": "0xff2b292c",
+    "children": [
+      {
+        "type": "dy_shimmer_column",
+        "data": {
+          "key": "dy_shimmer_column",
+          "itemCount": 1,
+          "interItemSpacing": 10,
+          "childItems": [
+            {
+              "type": "dy_shimmer_stack",
+              "data": {
+                "key": "2234656231",
+                "alignment": "center",
+                "shimmerBaseColor": "0xff3b3b3b",
+                "height": 300,
+                "borderRadius": 20,
+                "margin": "10",
+                "children": [
+                  {
+                    "type": "dy_positioned",
+                    "data": {
+                      "key": "131313",
+                      "child": {
+                        "type": "dy_container",
+                        "data": {
+                          "key": "234234234",
+                          "containerGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC",
+                          "borderColor": "0xff000000",
+                          "borderRadius": 20,
+                          "margin": "10",
+                          "showBorder": true,
+                          "child": {
+                            "type": "dy_image",
+                            "data": {
+                              "key": "242424234234",
+                              "src": "assets/images/ic_pokemon_placeholder.png",
+                              "width": 350,
+                              "height": 300,
+                              "imageType": "asset",
+                              "fit": "fill",
+                              "placeholderImagePath": "assets/images/ic_pokemon_placeholder.png"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "dy_shimmer_text",
+              "data": {
+                "key": "23423423424",
+                "margin": "0,10",
+                "shimmerBaseColor": "0xff3b3b3b",
+                "text": "Pokemon",
+                "textStyle": {
+                  "color": "0xffffffff",
+                  "fontWeight": "bold",
+                  "fontSize": 35
+                }
+              }
+            },
+            {
+              "type": "dy_row",
+              "data": {
+                "key": "131434",
+                "mainAxisAlignment": "center",
+                "children": [
+                  {
+                    "type": "dy_column",
+                    "data": {
+                      "key": "131434",
+                      "children": [
+                        {
+                          "type": "dy_shimmer_stack",
+                          "data": {
+                            "key": "234234234234",
+                            "alignment": "center",
+                            "shimmerBaseColor": "0xff3b3b3b",
+                            "borderRadius": 20,
+                            "padding": "10",
+                            "children": [
+                              {
+                                "type": "dy_positioned",
+                                "data": {
+                                  "key": "24242424234",
+                                  "child": {
+                                    "type": "dy_container",
+                                    "data": {
+                                      "key": "35435345345",
+                                      "backgroundColor": "0xff8eaec5",
+                                      "borderRadius": 20,
+                                      "width": 150,
+                                      "padding": "10",
+                                      "showBorder": true,
+                                      "child": {
+                                        "type": "dy_text",
+                                        "data": {
+                                          "key": "35345345",
+                                          "text": "Type 1",
+                                          "style": {
+                                            "color": "0xffffffff",
+                                            "fontWeight": "bold",
+                                            "fontSize": 15
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "dy_sized_box",
+                          "data": {
+                            "key": "23424234",
+                            "height": 25
+                          }
+                        },
+                        {
+                          "type": "dy_text",
+                          "data": {
+                            "key": "24243453454",
+                            "text": "X KG",
+                            "style": {
+                              "color": "0xffffffff",
+                              "fontWeight": "bold",
+                              "fontSize": 18
+                            }
+                          }
+                        },
+                        {
+                          "type": "dy_sized_box",
+                          "data": {
+                            "key": "34533535",
+                            "height": 10
+                          }
+                        },
+                        {
+                          "type": "dy_text",
+                          "data": {
+                            "key": "345353534",
+                            "text": "Weight",
+                            "style": {
+                              "color": "0xff555254",
+                              "fontWeight": "bold",
+                              "fontSize": 15
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "dy_sized_box",
+                    "data": {
+                      "key": "343445",
+                      "width": 20
+                    }
+                  },
+                  {
+                    "type": "dy_column",
+                    "data": {
+                      "key": "131434",
+                      "children": [
+                        {
+                          "type": "dy_shimmer_stack",
+                          "data": {
+                            "key": "234234234234",
+                            "alignment": "center",
+                            "shimmerBaseColor": "0xff3b3b3b",
+                            "borderRadius": 20,
+                            "padding": "10",
+                            "children": [
+                              {
+                                "type": "dy_positioned",
+                                "data": {
+                                  "key": "234234234",
+                                  "child": {
+                                    "type": "dy_container",
+                                    "data": {
+                                      "key": "234234234234",
+                                      "backgroundColor": "0xff719c8f",
+                                      "borderRadius": 20,
+                                      "width": 150,
+                                      "padding": "10",
+                                      "showBorder": true,
+                                      "child": {
+                                        "type": "dy_text",
+                                        "data": {
+                                          "key": "2342424234",
+                                          "text": "Type 2",
+                                          "style": {
+                                            "color": "0xffffffff",
+                                            "fontWeight": "bold",
+                                            "fontSize": 15
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "dy_sized_box",
+                          "data": {
+                            "key": "22424234234",
+                            "height": 25
+                          }
+                        },
+                        {
+                          "type": "dy_text",
+                          "data": {
+                            "key": "234344345345",
+                            "text": "X Mt",
+                            "style": {
+                              "color": "0xffffffff",
+                              "fontWeight": "bold",
+                              "fontSize": 18
+                            }
+                          }
+                        },
+                        {
+                          "type": "dy_sized_box",
+                          "data": {
+                            "key": "24245345",
+                            "height": 10
+                          }
+                        },
+                        {
+                          "type": "dy_text",
+                          "data": {
+                            "key": "353535345",
+                            "text": "Height",
+                            "style": {
+                              "color": "0xff555254",
+                              "fontWeight": "bold",
+                              "fontSize": 15
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "dy_container",
+              "data": {
+                "key": "2242324242134",
+                "margin": "0,20,0,0",
+                "child": {
+                  "type": "dy_shimmer_text",
+                  "data": {
+                    "key": "23424234234",
+                    "text": "Base Stats",
+                    "shimmerBaseColor": "0xff3b3b3b",
+                    "textStyle": {
+                      "color": "0xff8c8d8d",
+                      "fontWeight": "bold",
+                      "fontSize": 18
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "dy_shimmer_column",
+              "data": {
+                "key": "dy_shimmer_column",
+                "itemCount": 4,
+                "interItemSpacing": 15,
+                "childItems": [
+                  {
+                    "type": "dy_container",
+                    "data": {
+                      "child": {
+                        "type": "dy_row",
+                        "data": {
+                          "mainAxisAlignment": "start",
+                          "children": [
+                            {
+                              "type": "dy_container",
+                              "data": {
+                                "width": 40,
+                                "child": {
+                                  "type": "dy_text",
+                                  "data": {
+                                    "text": "Stat",
+                                    "style": {
+                                      "fontSize": 15,
+                                      "fontWeight": "bold",
+                                      "color": "0xffffffff"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "dy_sized_box",
+                              "data": {
+                                "width": 15
+                              }
+                            },
+                            {
+                              "type": "dy_shimmer_card",
+                              "data": {
+                                "width": 300,
+                                "shimmerBaseColor": "0xff3b3b3b",
+                                "borderRadius": 20,
+                                "child": {
+                                  "type": "dy_container",
+                                  "data": {
+                                    "height": 18
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

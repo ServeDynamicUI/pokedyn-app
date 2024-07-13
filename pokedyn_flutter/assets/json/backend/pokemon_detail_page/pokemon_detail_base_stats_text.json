@@ -1,0 +1,19 @@
+{
+  "type": "dy_container",
+  "data": {
+    "key": "{KEY_1}",
+    "margin": "0,20,0,0",
+    "child": {
+      "type": "dy_text",
+      "data": {
+        "key": "{KEY_2}",
+        "text": "Base Stats",
+        "style": {
+          "color": "0xff8c8d8d",
+          "fontWeight": "bold",
+          "fontSize": 20
+        }
+      }
+    }
+  }
+}

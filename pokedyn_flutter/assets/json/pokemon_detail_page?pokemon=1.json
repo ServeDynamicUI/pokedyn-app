@@ -1,0 +1,531 @@
+{
+  "type": "dy_scaffold",
+  "data": {
+    "key": "1236456",
+    "appBar": {
+      "pageTitle": "Pokemon Info",
+      "appBarGradient": "-1.0,0.0;1.0,0.0;0xff80b860,0xff619067",
+      "rightActions": [
+        {
+          "type": "dy_text",
+          "data": {
+            "key": "243535345",
+            "text": "#001",
+            "margin": "10,0",
+            "style": {
+              "color": "0xffffffff",
+              "fontWeight": "bold",
+              "fontSize": 15
+            }
+          }
+        }
+      ]
+    },
+    "scrollable": true,
+    "mainAxisAlignment": "start",
+    "padding": "20",
+    "itemsSpacing": 10,
+    "backgroundColor": "0xff2b292c",
+    "height": -1,
+    "children": [
+      {
+        "type": "dy_carousel",
+        "data": {
+          "key": "213234324324",
+          "reusable": true,
+          "carouselOptions": {
+            "autoPlay": true,
+            "enlargeCenterPage": true,
+            "scrollDirection": "horizontal",
+            "reverse": false,
+            "enableInfiniteScroll": false,
+            "viewportFraction": 1,
+            "height": 300
+          },
+          "children": [
+            {
+              "type": "dy_card",
+              "data": {
+                "key": "123454545234343",
+                "margin": "10",
+                "padding": "10",
+                "elevation": 10,
+                "linearGradient": "-1.0,0.0;1.0,0.0;0xff94cbae,0xff619067",
+                "borderRadius": 20,
+                "child": {
+                  "type": "dy_image",
+                  "data": {
+                    "key": "212226323233",
+                    "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                    "width": 450,
+                    "imageType": "network",
+                    "fit": "fill",
+                    "placeholderImagePath": "assets/images/ic_pokemon_placeholder.png"
+                  }
+                }
+              }
+            },
+            {
+              "type": "dy_card",
+              "data": {
+                "key": "3453453453",
+                "margin": "10",
+                "padding": "10",
+                "elevation": 10,
+                "linearGradient": "-1.0,0.0;1.0,0.0;0xff80b860,0xff619067",
+                "borderRadius": 20,
+                "child": {
+                  "type": "dy_image",
+                  "data": {
+                    "key": "3534534535",
+                    "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1.png",
+                    "width": 450,
+                    "imageType": "network",
+                    "fit": "fill",
+                    "placeholderImagePath": "assets/images/ic_pokemon_placeholder.png"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "dy_container",
+        "data": {
+          "key": "345353535",
+          "margin": "0,20",
+          "child": {
+            "type": "dy_text",
+            "data": {
+              "key": "35353535",
+              "text": "Balbasaur",
+              "style": {
+                "color": "0xffffffff",
+                "fontWeight": "bold",
+                "fontSize": 35
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "dy_row",
+        "data": {
+          "key": "131434",
+          "mainAxisAlignment": "center",
+          "children": [
+            {
+              "type": "dy_column",
+              "data": {
+                "key": "131434",
+                "children": [
+                  {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "35435345345",
+                      "backgroundColor": "0xff8eaec5",
+                      "borderRadius": 20,
+                      "width": 150,
+                      "padding": "10",
+                      "showBorder": true,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "35345345",
+                          "text": "Water",
+                          "style": {
+                            "color": "0xffffffff",
+                            "fontWeight": "bold",
+                            "fontSize": 15
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "dy_sized_box",
+                    "data": {
+                      "key": "23424234",
+                      "height": 25
+                    }
+                  },
+                  {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "24243453454",
+                      "text": "70.5 KG",
+                      "style": {
+                        "color": "0xffffffff",
+                        "fontWeight": "bold",
+                        "fontSize": 18
+                      }
+                    }
+                  },
+                  {
+                    "type": "dy_sized_box",
+                    "data": {
+                      "key": "34533535",
+                      "height": 10
+                    }
+                  },
+                  {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "345353534",
+                      "text": "Weight",
+                      "style": {
+                        "color": "0xff555254",
+                        "fontWeight": "bold",
+                        "fontSize": 15
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "dy_sized_box",
+              "data": {
+                "key": "343445",
+                "width": 20
+              }
+            },
+            {
+              "type": "dy_column",
+              "data": {
+                "key": "131434",
+                "children": [
+                  {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "9879345734",
+                      "backgroundColor": "0xff719c8f",
+                      "borderRadius": 20,
+                      "width": 150,
+                      "padding": "10",
+                      "showBorder": true,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "427345345",
+                          "text": "Leaves",
+                          "style": {
+                            "color": "0xffffffff",
+                            "fontWeight": "bold",
+                            "fontSize": 15
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "dy_sized_box",
+                    "data": {
+                      "key": "22424234234",
+                      "height": 25
+                    }
+                  },
+                  {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "234344345345",
+                      "text": "1.5 M",
+                      "style": {
+                        "color": "0xffffffff",
+                        "fontWeight": "bold",
+                        "fontSize": 18
+                      }
+                    }
+                  },
+                  {
+                    "type": "dy_sized_box",
+                    "data": {
+                      "key": "24245345",
+                      "height": 10
+                    }
+                  },
+                  {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "353535345",
+                      "text": "Height",
+                      "style": {
+                        "color": "0xff555254",
+                        "fontWeight": "bold",
+                        "fontSize": 15
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "dy_container",
+        "data": {
+          "key": "234242424234",
+          "margin": "0,20,0,0",
+          "child": {
+            "type": "dy_text",
+            "data": {
+              "key": "245435345",
+              "text": "Base Stats",
+              "style": {
+                "color": "0xff8c8d8d",
+                "fontWeight": "bold",
+                "fontSize": 20
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "dy_column",
+        "data": {
+          "key": "134234234",
+          "interItemSpacing": 20,
+          "children": [
+            {
+              "type": "dy_percentage_indicator",
+              "data": {
+                "key": "34343434",
+                "type": "linear",
+                "linearPercentIndicator": {
+                  "percent": 0.76,
+                  "lineHeight": 18,
+                  "linearGradient": "-1.0,0.0;1.0,0.0;0xFF808000,0xFFFF0000",
+                  "animation": true,
+                  "animationDuration": 1000,
+                  "barRadius": 10,
+                  "backgroundColor": "0xffffffff",
+                  "center": {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "2424234",
+                      "text": "168/300",
+                      "style": {
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                        "color": "0xff000000"
+                      }
+                    }
+                  },
+                  "leading": {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "2342435435435",
+                      "width": 40,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "343434",
+                          "text": "HP",
+                          "style": {
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                            "color": "0xffffffff"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "dy_percentage_indicator",
+              "data": {
+                "key": "24234234",
+                "type": "linear",
+                "linearPercentIndicator": {
+                  "percent": 0.69,
+                  "lineHeight": 18,
+                  "animation": true,
+                  "animationDuration": 1000,
+                  "barRadius": 10,
+                  "backgroundColor": "0xffffffff",
+                  "linearGradient": "-1.0,0.0;1.0,0.0;0xFF006400,0xfffda626",
+                  "center": {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "24234234234",
+                      "text": "205/300",
+                      "style": {
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                        "color": "0xff000000"
+                      }
+                    }
+                  },
+                  "leading": {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "345345345345",
+                      "width": 40,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "234345345345",
+                          "text": "ATK",
+                          "style": {
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                            "color": "0xffffffff"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "dy_percentage_indicator",
+              "data": {
+                "key": "34343434",
+                "type": "linear",
+                "linearPercentIndicator": {
+                  "percent": 0.92,
+                  "lineHeight": 18,
+                  "animation": true,
+                  "animationDuration": 1000,
+                  "barRadius": 10,
+                  "backgroundColor": "0xffffffff",
+                  "linearGradient": "-1.0,0.0;1.0,0.0;0xff0290e9,0xfffff000",
+                  "center": {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "2424234",
+                      "text": "64/300",
+                      "style": {
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                        "color": "0xff000000"
+                      }
+                    }
+                  },
+                  "leading": {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "02947247944753",
+                      "width": 40,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "92482428724",
+                          "text": "DEF",
+                          "style": {
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                            "color": "0xffffffff"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "dy_percentage_indicator",
+              "data": {
+                "key": "34343434",
+                "type": "linear",
+                "linearPercentIndicator": {
+                  "percent": 0.66,
+                  "lineHeight": 18,
+                  "animation": true,
+                  "animationDuration": 1000,
+                  "barRadius": 10,
+                  "backgroundColor": "0xffffffff",
+                  "linearGradient": "-1.0,0.0;1.0,0.0;0xff8eafc4,0xff6e7ac4",
+                  "center": {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "927469264876758345",
+                      "text": "200/300",
+                      "style": {
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                        "color": "0xff000000"
+                      }
+                    }
+                  },
+                  "leading": {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "9836749727234",
+                      "width": 40,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "9724279472394",
+                          "text": "SPD",
+                          "style": {
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                            "color": "0xffffffff"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "dy_percentage_indicator",
+              "data": {
+                "key": "34343434",
+                "type": "linear",
+                "linearPercentIndicator": {
+                  "percent": 0.85,
+                  "lineHeight": 18,
+                  "animation": true,
+                  "animationDuration": 1000,
+                  "barRadius": 10,
+                  "backgroundColor": "0xffffffff",
+                  "linearGradient": "-1.0,0.0;1.0,0.0;0xff378a3a,0xff8a3a37",
+                  "center": {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "2424234",
+                      "text": "295/1000",
+                      "style": {
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                        "color": "0xff000000"
+                      }
+                    }
+                  },
+                  "leading": {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "23345345345",
+                      "width": 40,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "3534534535",
+                          "text": "EXP",
+                          "style": {
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                            "color": "0xffffffff"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

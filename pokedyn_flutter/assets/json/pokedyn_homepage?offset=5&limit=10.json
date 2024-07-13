@@ -1,0 +1,192 @@
+{
+  "children": [
+    {
+      "type": "dy_gesture_detector",
+      "data": {
+        "key": "234423245345",
+        "onTapAction": {
+          "actionString": "/moveToScreen",
+          "extras": {
+            "url": "assets/json/pokemon_detail_page?pokemon=5.json",
+            "urlType": "local",
+            "navigationType": "screen",
+            "navigationStyle": "push"
+          }
+        },
+        "child": {
+          "type": "dy_container",
+          "data": {
+            "key": "234255435",
+            "backgroundColor": "0xffcc6455",
+            "height": 350,
+            "showBorder": true,
+            "borderColor": "0xffffffff",
+            "borderRadius": 15,
+            "child": {
+              "type": "dy_column",
+              "data": {
+                "key": "345345345345",
+                "children": [
+                  {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "3534535345",
+                      "child": {
+                        "type": "dy_image",
+                        "data": {
+                          "key": "34535345345",
+                          "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
+                          "width": 250,
+                          "height": 200,
+                          "imageType": "network",
+                          "fit": "fill",
+                          "placeholderImagePath": "assets/images/ic_pokemon_placeholder.png"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "353453453452424",
+                      "text": "Charmeleon",
+                      "style": {
+                        "color": "0xffffffff",
+                        "fontWeight": "bold",
+                        "fontSize": 20
+                      }
+                    }
+                  },
+                  {
+                    "type": "dy_sized_box",
+                    "data": {
+                      "key": "3463564567",
+                      "height": 30
+                    }
+                  },
+                  {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "3536feete",
+                      "backgroundColor": "0xffe5c8b8",
+                      "borderRadius": 20,
+                      "width": 250,
+                      "padding": "10",
+                      "showBorder": true,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "wrwrtwrt345345345",
+                          "text": "Type: Fire",
+                          "style": {
+                            "color": "0xffffffff",
+                            "fontWeight": "bold",
+                            "fontSize": 20
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "dy_gesture_detector",
+      "data": {
+        "key": "2344235435345",
+        "onTapAction": {
+          "actionString": "/moveToScreen",
+          "extras": {
+            "url": "assets/json/pokemon_detail_page?pokemon=6.json",
+            "urlType": "local",
+            "navigationType": "screen",
+            "navigationStyle": "push"
+          }
+        },
+        "child": {
+          "type": "dy_container",
+          "data": {
+            "key": "53453535",
+            "backgroundColor": "0xffd48f54",
+            "height": 350,
+            "showBorder": true,
+            "borderColor": "0xffffffff",
+            "borderRadius": 15,
+            "child": {
+              "type": "dy_column",
+              "data": {
+                "key": "4564576464",
+                "children": [
+                  {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "24242424",
+                      "child": {
+                        "type": "dy_image",
+                        "data": {
+                          "key": "24245356efg",
+                          "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+                          "width": 250,
+                          "height": 200,
+                          "imageType": "network",
+                          "fit": "fill",
+                          "placeholderImagePath": "assets/images/ic_pokemon_placeholder.png"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "4535345etert",
+                      "text": "Charizard",
+                      "style": {
+                        "color": "0xffffffff",
+                        "fontWeight": "bold",
+                        "fontSize": 20
+                      }
+                    }
+                  },
+                  {
+                    "type": "dy_sized_box",
+                    "data": {
+                      "key": "345435345efgert",
+                      "height": 30
+                    }
+                  },
+                  {
+                    "type": "dy_container",
+                    "data": {
+                      "key": "3534534534",
+                      "backgroundColor": "0xffd7c290",
+                      "borderRadius": 20,
+                      "width": 250,
+                      "padding": "10",
+                      "showBorder": true,
+                      "child": {
+                        "type": "dy_text",
+                        "data": {
+                          "key": "345345435dget",
+                          "text": "Type: Fire",
+                          "style": {
+                            "color": "0xffffffff",
+                            "fontWeight": "bold",
+                            "fontSize": 20
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

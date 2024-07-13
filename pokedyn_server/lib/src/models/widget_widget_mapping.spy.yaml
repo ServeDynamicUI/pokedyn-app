@@ -1,0 +1,5 @@
+class: WidgetWidgetMapping
+table: widget_widget_mapping
+fields:
+  parentWidget: int
+  childWidgetId: int?

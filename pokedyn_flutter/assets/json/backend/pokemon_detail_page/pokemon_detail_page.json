@@ -1,0 +1,32 @@
+{
+  "type": "dy_scaffold",
+  "data": {
+    "key": "{KEY_1}",
+    "appBar": {
+      "pageTitle": "Pokemon Info",
+      "appBarGradient": "{LINEAR_GRADIENT_AS_PER_POKEMON_MAIN_TYPE}",
+      "rightActions": [
+        {
+          "type": "dy_text",
+          "data": {
+            "key": "{KEY_2}",
+            "text": "{POKEMON_ID}",
+            "margin": "10,0",
+            "style": {
+              "color": "0xffffffff",
+              "fontWeight": "bold",
+              "fontSize": 15
+            }
+          }
+        }
+      ]
+    },
+    "scrollable": true,
+    "mainAxisAlignment": "start",
+    "padding": "20",
+    "itemsSpacing": 10,
+    "backgroundColor": "0xff2b292c",
+    "height": -1,
+    "children": []
+  }
+}

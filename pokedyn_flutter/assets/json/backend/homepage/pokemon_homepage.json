@@ -1,0 +1,30 @@
+{
+  "type": "dy_scaffold",
+  "data": {
+    "key": "1236456",
+    "appBar": {
+      "pageTitle": "Pokedyn Home Page",
+      "appBarGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC"
+    },
+    "scrollable": true,
+    "paginated": true,
+    "mainAxisAlignment": "start",
+    "padding": "20",
+    "itemsSpacing": 10,
+    "nextUrl": "{POKEMON_HOME_PAGE_PAGINATED_URL}",
+    "children": [],
+    "paginatedLoaderWidget": {
+      "type": "dy_loader",
+      "data": {
+        "key": "131454531",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "loadingText": "Grabbing More Pokemons...",
+        "style": {
+          "color": "0xFF000000",
+          "fontSize": 20
+        }
+      }
+    }
+  }
+}

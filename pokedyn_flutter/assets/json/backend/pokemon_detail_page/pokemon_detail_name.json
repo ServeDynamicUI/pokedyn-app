@@ -1,0 +1,19 @@
+{
+  "type": "dy_container",
+  "data": {
+    "key": "{KEY_1}",
+    "margin": "0,20",
+    "child": {
+      "type": "dy_text",
+      "data": {
+        "key": "{KEY_2}",
+        "text": "{POKEMON_NAME}",
+        "style": {
+          "color": "0xffffffff",
+          "fontWeight": "bold",
+          "fontSize": 35
+        }
+      }
+    }
+  }
+}

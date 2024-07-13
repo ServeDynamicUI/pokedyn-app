@@ -1,0 +1,154 @@
+{
+  "type": "dy_row",
+  "data": {
+    "key": "{KEY_1}",
+    "mainAxisAlignment": "center",
+    "children": [
+      {
+        "type": "dy_column",
+        "data": {
+          "key": "{KEY_2}",
+          "children": [
+            {
+              "type": "dy_container",
+              "data": {
+                "key": "{KEY_3}",
+                "backgroundColor": "0xff8eaec5",
+                "borderRadius": 20,
+                "width": 150,
+                "padding": "10",
+                "showBorder": true,
+                "child": {
+                  "type": "dy_text",
+                  "data": {
+                    "key": "{KEY_4}",
+                    "text": "{POKEMON_TYPE1}",
+                    "style": {
+                      "color": "0xffffffff",
+                      "fontWeight": "bold",
+                      "fontSize": 15
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "dy_sized_box",
+              "data": {
+                "key": "{KEY_5}",
+                "height": 25
+              }
+            },
+            {
+              "type": "dy_text",
+              "data": {
+                "key": "{KEY_6}",
+                "text": "{POKEMON_WEIGHT} KG",
+                "style": {
+                  "color": "0xffffffff",
+                  "fontWeight": "bold",
+                  "fontSize": 18
+                }
+              }
+            },
+            {
+              "type": "dy_sized_box",
+              "data": {
+                "key": "{KEY_7}",
+                "height": 10
+              }
+            },
+            {
+              "type": "dy_text",
+              "data": {
+                "key": "{KEY_8}",
+                "text": "Weight",
+                "style": {
+                  "color": "0xff555254",
+                  "fontWeight": "bold",
+                  "fontSize": 15
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "dy_sized_box",
+        "data": {
+          "key": "{KEY_9}",
+          "width": 20
+        }
+      },
+      {
+        "type": "dy_column",
+        "data": {
+          "key": "{KEY_10}",
+          "children": [
+            {
+              "type": "dy_container",
+              "data": {
+                "key": "{KEY_11}",
+                "backgroundColor": "0xff719c8f",
+                "borderRadius": 20,
+                "width": 150,
+                "padding": "10",
+                "showBorder": true,
+                "child": {
+                  "type": "dy_text",
+                  "data": {
+                    "key": "{KEY_12}",
+                    "text": "{POKEMON_TYPE2}",
+                    "style": {
+                      "color": "0xffffffff",
+                      "fontWeight": "bold",
+                      "fontSize": 15
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "dy_sized_box",
+              "data": {
+                "key": "{KEY_13}",
+                "height": 25
+              }
+            },
+            {
+              "type": "dy_text",
+              "data": {
+                "key": "{KEY_14}",
+                "text": "{POKEMON_HEIGHT} M",
+                "style": {
+                  "color": "0xffffffff",
+                  "fontWeight": "bold",
+                  "fontSize": 18
+                }
+              }
+            },
+            {
+              "type": "dy_sized_box",
+              "data": {
+                "key": "{KEY_15}",
+                "height": 10
+              }
+            },
+            {
+              "type": "dy_text",
+              "data": {
+                "key": "{KEY_16}",
+                "text": "Height",
+                "style": {
+                  "color": "0xff555254",
+                  "fontWeight": "bold",
+                  "fontSize": 15
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

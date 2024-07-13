@@ -1,0 +1,7 @@
+class: Widget
+table: widget
+fields:
+  widgetId: int
+  widgetType: String
+  widgetData: String
+  widgetName: String

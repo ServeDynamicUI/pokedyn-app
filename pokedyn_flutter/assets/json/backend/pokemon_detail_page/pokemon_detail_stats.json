@@ -1,0 +1,10 @@
+{
+  "type": "dy_column",
+  "data": {
+    "key": "{KEY_1}",
+    "interItemSpacing": 20,
+    "children": [
+
+    ]
+  }
+}

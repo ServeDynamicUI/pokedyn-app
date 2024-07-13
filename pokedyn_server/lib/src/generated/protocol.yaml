@@ -1,0 +1,8 @@
+authPage:
+  - getPage:
+example:
+  - hello:
+pokedynHomepage:
+  - getPage:
+pokemonDetailPage:
+  - getPage:

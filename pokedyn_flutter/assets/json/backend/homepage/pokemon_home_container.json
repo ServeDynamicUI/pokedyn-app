@@ -1,0 +1,94 @@
+{
+  "type": "dy_gesture_detector",
+  "data": {
+    "key": "{KEY_1}",
+    "onTapAction": {
+      "actionString": "/moveToScreen",
+      "extras": {
+        "url": "{BACKEND_POKEMON_DETAIL_URL}",
+        "urlType": "network",
+        "navigationType": "screen",
+        "navigationStyle": "push"
+      }
+    },
+    "child": {
+      "type": "dy_container",
+      "data": {
+        "key": "{KEY_2}",
+        "backgroundColor": "{BG_COLOR_AS_PER_POKEMON_TYPE}",
+        "height": 350,
+        "showBorder": true,
+        "borderColor": "0xffffffff",
+        "borderRadius": 15,
+        "child": {
+          "type": "dy_column",
+          "data": {
+            "key": "{KEY_3}",
+            "children": [
+              {
+                "type": "dy_container",
+                "data": {
+                  "key": "{KEY_4}",
+                  "child": {
+                    "type": "dy_image",
+                    "data": {
+                      "key": "{KEY_5}",
+                      "src": "{POKEMON_IMAGE}",
+                      "width": 250,
+                      "height": 200,
+                      "imageType": "network",
+                      "fit": "fill",
+                      "placeholderImagePath": "assets/images/ic_pokemon_placeholder.png"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "dy_text",
+                "data": {
+                  "key": "{KEY_6}",
+                  "text": "{POKEMON_NAME}",
+                  "style": {
+                    "color": "0xffffffff",
+                    "fontWeight": "bold",
+                    "fontSize": 20
+                  }
+                }
+              },
+              {
+                "type": "dy_sized_box",
+                "data": {
+                  "key": "{KEY_7}",
+                  "height": 30
+                }
+              },
+              {
+                "type": "dy_container",
+                "data": {
+                  "key": "{KEY_8}",
+                  "backgroundColor": "0xff8eaec5",
+                  "borderRadius": 20,
+                  "width": 250,
+                  "padding": "10",
+                  "showBorder": true,
+                  "child": {
+                    "type": "dy_text",
+                    "data": {
+                      "key": "{KEY_9}",
+                      "text": "Type: {POKEMON_MAIN_TYPE}",
+                      "style": {
+                        "color": "0xffffffff",
+                        "fontWeight": "bold",
+                        "fontSize": 20
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

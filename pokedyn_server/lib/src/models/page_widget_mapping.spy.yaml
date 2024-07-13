@@ -1,0 +1,5 @@
+class: PageWidgetMapping
+table: page_widget_mapping
+fields:
+  pageId: int
+  widgetId: int

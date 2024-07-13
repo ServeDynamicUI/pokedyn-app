@@ -1,0 +1,191 @@
+{
+  "type": "dy_scaffold",
+  "data": {
+    "key": "1236456",
+    "appBar": {
+      "pageTitle": "Pokedyn Login"
+    },
+    "scrollable": false,
+    "mainAxisAlignment": "start",
+    "children": [{
+      "type": "dy_container",
+      "data": {
+        "key": "223236423",
+        "backgroundColor": "0xff90EE90",
+        "height": -1,
+        "child": {
+          "type": "dy_stack",
+          "data": {
+            "key": "2234656231",
+            "alignment": "center",
+            "children": [
+              {
+                "type": "dy_container",
+                "data": {
+                  "key": "123123",
+                  "child": {
+                    "type": "dy_image",
+                    "data": {
+                      "key": "212226323233",
+                      "src": "assets/images/pokemon_login.png",
+                      "width": -1,
+                      "height": -1,
+                      "imageType": "asset",
+                      "fit": "fill",
+                      "placeholderImagePath": "assets/images/icon_placeholder.png"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "dy_column",
+                "data": {
+                  "key": "12313",
+                  "children": [
+                    {
+                      "type": "dy_container",
+                      "data": {
+                        "key": "34755345345345",
+                        "width": 300,
+                        "child": {
+                          "type": "dy_text_field",
+                          "data": {
+                            "key": "784867234hwdf",
+                            "initialText": "",
+                            "textFieldDecoration": {
+                              "textAlign": "start",
+                              "obscureText": false,
+                              "maxLines": 1,
+                              "decoration": {
+                                "fillColor": "0xFFFFFFFF",
+                                "filled": true,
+                                "hintText": "Enter Email Address",
+                                "labelText": "Email",
+                                "focusBorderColor": "0xFFFFA500",
+                                "borderWidth": 3,
+                                "borderRadius": 10,
+                                "labelStyle": {
+                                  "fontSize": 15,
+                                  "fontWeight": "bold",
+                                  "color": "0xFF000000"
+                                },
+                                "hintStyle": {
+                                  "fontSize": 15,
+                                  "fontWeight": "bold",
+                                  "color": "0xFF888888"
+                                }
+                              },
+                              "style": {
+                                "color": "0xFF000000",
+                                "fontSize": 25
+                              },
+                              "errorText": "Please Enter Valid Email Address.",
+                              "errorTextStyle": {
+                                "fontWeight": "bold",
+                                "color": "0xffFF0000"
+                              },
+                              "cursorColor": "0xFF0000FF"
+                            },
+                            "regexValidator": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "dy_sized_box",
+                      "data": {
+                        "key": "827487246",
+                        "height": 30
+                      }
+                    },
+                    {
+                      "type": "dy_container",
+                      "data": {
+                        "key": "98274924724",
+                        "width": 300,
+                        "child": {
+                          "type": "dy_text_field",
+                          "data": {
+                            "key": "8723462434",
+                            "initialText": "",
+                            "textFieldDecoration": {
+                              "textAlign": "start",
+                              "obscureText": false,
+                              "maxLines": 1,
+                              "decoration": {
+                                "fillColor": "0xFFFFFFFF",
+                                "filled": true,
+                                "hintText": "Enter User Name",
+                                "labelText": "UserName",
+                                "focusBorderColor": "0xFFFFA500",
+                                "borderWidth": 3,
+                                "borderRadius": 10,
+                                "labelStyle": {
+                                  "fontSize": 15,
+                                  "fontWeight": "bold",
+                                  "color": "0xFF000000"
+                                },
+                                "hintStyle": {
+                                  "fontSize": 15,
+                                  "fontWeight": "bold",
+                                  "color": "0xFF888888"
+                                }
+                              },
+                              "style": {
+                                "color": "0xFF000000",
+                                "fontSize": 25
+                              },
+                              "errorText": "User Name Should be At least 6 characters long.",
+                              "errorTextStyle": {
+                                "fontWeight": "bold",
+                                "color": "0xffFF0000"
+                              },
+                              "cursorColor": "0xFF0000FF"
+                            },
+                            "regexValidator": "^.{6,}$"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "dy_sized_box",
+                      "data": {
+                        "key": "82462842",
+                        "height": 30
+                      }
+                    },
+                    {
+                      "type": "dy_button",
+                      "data": {
+                        "key": "87628624",
+                        "buttonColor": "0xff90EE90",
+                        "buttonBorderRadius": 10,
+                        "padding": "10",
+                        "width": 200,
+                        "child": {
+                          "type": "dy_text",
+                          "data": {
+                            "key": "23242342",
+                            "text": "Login",
+                            "style": {
+                              "color": "0xffffffff",
+                              "fontWeight": "bold",
+                              "fontSize": 20
+                            }
+                          }
+                        },
+                        "action": {
+                          "actionString": "/form"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }]
+  }
+}

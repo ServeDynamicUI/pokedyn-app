@@ -1,0 +1,6 @@
+class: PageUriMapping
+table: page_uri_mapping
+fields:
+  pageUri: String
+  pageId: int
+  pageData: String

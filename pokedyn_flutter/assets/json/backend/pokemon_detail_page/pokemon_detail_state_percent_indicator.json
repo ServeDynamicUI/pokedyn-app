@@ -1,0 +1,47 @@
+{
+  "type": "dy_percentage_indicator",
+  "data": {
+    "key": "{KEY_1}",
+    "type": "linear",
+    "linearPercentIndicator": {
+      "percent": "{PERCENT_VALUE_IN_DOUBLE}",
+      "lineHeight": 18,
+      "linearGradient": "{GRADIENT_AS_PER_STAT}",
+      "animation": true,
+      "animationDuration": 1000,
+      "barRadius": 10,
+      "backgroundColor": "0xffffffff",
+      "center": {
+        "type": "dy_text",
+        "data": {
+          "key": "{KEY_2}",
+          "text": "{PERCENT_VALUE_TEXT}",
+          "style": {
+            "fontSize": 15,
+            "fontWeight": "bold",
+            "color": "0xff000000"
+          }
+        }
+      },
+      "leading": {
+        "type": "dy_container",
+        "data": {
+          "key": "{KEY_3}",
+          "width": 40,
+          "child": {
+            "type": "dy_text",
+            "data": {
+              "key": "{KEY_4}",
+              "text": "{STAT_NAME}",
+              "style": {
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "color": "0xffffffff"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
