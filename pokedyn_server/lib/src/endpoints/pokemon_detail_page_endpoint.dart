@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'package:pokedyn_server/src/generated/protocol.dart';
+import 'package:pokedyn_server/src/utils/util.dart';
 import 'package:serverpod/serverpod.dart';
 import 'package:pokedyn_server/src/generated/widget.dart' as gen;
 import 'package:http/http.dart' as http;
@@ -82,7 +83,7 @@ class PokemonDetailPageEndpoint extends Endpoint {
       }
     }
     
-    Map<String, dynamic> carouselJson = _getMapFromString(carouselJsonString.replaceAll('{KEY_1}', _generateRandomString(10)));
+    Map<String, dynamic> carouselJson = Util.getMapFromString(carouselJsonString.replaceAll('{KEY_1}', Util.generateRandomString(10)));
 
     _addCarouselCards(carouselJson, pokemonCarouselCardJsonString);
 
@@ -97,8 +98,8 @@ class PokemonDetailPageEndpoint extends Endpoint {
   }
 
   Map<String, dynamic> _addPokemonStatsColumn(String pokemonDetailStatsColumnJsonString, String pokemonDetailStatPercentIndicatorJsonString){
-    Map<String, dynamic> pokemonDetailStatsColumnJson = _getMapFromString(pokemonDetailStatsColumnJsonString
-        .replaceAll("{KEY_1}", _generateRandomString(15))
+    Map<String, dynamic> pokemonDetailStatsColumnJson = Util.getMapFromString(pokemonDetailStatsColumnJsonString
+        .replaceAll("{KEY_1}", Util.generateRandomString(15))
     );
 
     pokemonDetailStatsColumnJson['data']['children'] = [];
@@ -110,7 +111,7 @@ class PokemonDetailPageEndpoint extends Endpoint {
 
       for(int i=1;i<=4;i++){
         String key = '{KEY_$i}';
-        pokemonDetailStatJsonString = pokemonDetailStatJsonString.replaceAll(key, _generateRandomString(10));
+        pokemonDetailStatJsonString = pokemonDetailStatJsonString.replaceAll(key, Util.generateRandomString(10));
       }
 
       pokemonDetailStatJsonString = pokemonDetailStatJsonString
@@ -119,25 +120,25 @@ class PokemonDetailPageEndpoint extends Endpoint {
         .replaceAll('{PERCENT_VALUE_TEXT}', ('${stat.value['value']} / ${stat.value['maxValue']}'))
         .replaceAll('{STAT_NAME}', stat.key);
 
-      (pokemonDetailStatsColumnJson['data']['children'] as List).add(_getMapFromString(pokemonDetailStatJsonString));
+      (pokemonDetailStatsColumnJson['data']['children'] as List).add(Util.getMapFromString(pokemonDetailStatJsonString));
     }
 
     return pokemonDetailStatsColumnJson;
   }
 
   Map<String, dynamic> _addPokemonBaseStatsText(String pokemonDetailBaseStatsTextJsonString){
-    Map<String, dynamic> pokemonDetailPokemonNameJson = _getMapFromString(pokemonDetailBaseStatsTextJsonString
-        .replaceAll("{KEY_1}", _generateRandomString(15))
-        .replaceAll("{KEY_2}", _generateRandomString(15))
+    Map<String, dynamic> pokemonDetailPokemonNameJson = Util.getMapFromString(pokemonDetailBaseStatsTextJsonString
+        .replaceAll("{KEY_1}", Util.generateRandomString(15))
+        .replaceAll("{KEY_2}", Util.generateRandomString(15))
     );
 
     return pokemonDetailPokemonNameJson;
   }
 
   Map<String, dynamic> _addPokemonNameCard(String pokemonDetailPokemonName){
-    Map<String, dynamic> pokemonDetailPokemonNameJson = _getMapFromString(pokemonDetailPokemonName
-        .replaceAll("{KEY_1}", _generateRandomString(15))
-        .replaceAll("{KEY_2}", _generateRandomString(15))
+    Map<String, dynamic> pokemonDetailPokemonNameJson = Util.getMapFromString(pokemonDetailPokemonName
+        .replaceAll("{KEY_1}", Util.generateRandomString(15))
+        .replaceAll("{KEY_2}", Util.generateRandomString(15))
         .replaceAll("{POKEMON_NAME}", pokemonDetail!['name'])
     );
 
@@ -148,7 +149,7 @@ class PokemonDetailPageEndpoint extends Endpoint {
 
     for(int i=1;i<=16;i++){
       String key = "{KEY_$i}";
-      pokemonTypeDetailString = pokemonTypeDetailString.replaceAll(key, _generateRandomString(15));
+      pokemonTypeDetailString = pokemonTypeDetailString.replaceAll(key, Util.generateRandomString(15));
     }
 
     for(int i=1;i<=(pokemonDetail!['types'] as List).length;i++){
@@ -156,10 +157,10 @@ class PokemonDetailPageEndpoint extends Endpoint {
       String colorKey = "{POKEMON_TYPE${i}_COLOR}";
       pokemonTypeDetailString = pokemonTypeDetailString
           .replaceAll(key, pokemonDetail!['types'][i-1])
-          .replaceAll(colorKey, _getColorForPokemonType(pokemonDetail!['types'][i-1]));
+          .replaceAll(colorKey, Util.getColorForPokemonType(pokemonDetail!['types'][i-1]));
     }
 
-    Map<String, dynamic> pokemonDetailPokemonNameJson = _getMapFromString(pokemonTypeDetailString
+    Map<String, dynamic> pokemonDetailPokemonNameJson = Util.getMapFromString(pokemonTypeDetailString
         .replaceAll("{POKEMON_WEIGHT}", pokemonDetail!['weight'].toString())
         .replaceAll("{POKEMON_HEIGHT}", pokemonDetail!['height'].toString())
     );
@@ -177,17 +178,17 @@ class PokemonDetailPageEndpoint extends Endpoint {
 
     String mainType = _getPokemonTypeGradient(pokemonDetail!['types'][0]);
 
-    Map<String, dynamic> pokemonCardJson1 = _getMapFromString(pokemonCard1
+    Map<String, dynamic> pokemonCardJson1 = Util.getMapFromString(pokemonCard1
         .replaceAll("{LINEAR_GRADIENT_AS_PER_TYPE}", mainType)
         .replaceAll('{POKEMON_OFFICIAL_ARTWORK_PNG_URL}', images[0])
-        .replaceAll('{KEY_1}', _generateRandomString(15))
-        .replaceAll('{KEY_2}', _generateRandomString(15)));
+        .replaceAll('{KEY_1}', Util.generateRandomString(15))
+        .replaceAll('{KEY_2}', Util.generateRandomString(15)));
 
-    Map<String, dynamic> pokemonCardJson2 = _getMapFromString(pokemonCard2
+    Map<String, dynamic> pokemonCardJson2 = Util.getMapFromString(pokemonCard2
             .replaceAll("{LINEAR_GRADIENT_AS_PER_TYPE}", mainType)
             .replaceAll('{POKEMON_OFFICIAL_ARTWORK_PNG_URL}', images[1])
-            .replaceAll('{KEY_1}', _generateRandomString(15))
-            .replaceAll('{KEY_2}', _generateRandomString(15)),
+            .replaceAll('{KEY_1}', Util.generateRandomString(15))
+            .replaceAll('{KEY_2}', Util.generateRandomString(15)),
     );
 
 
@@ -299,63 +300,5 @@ class PokemonDetailPageEndpoint extends Endpoint {
     }
 
     return convertedStats;
-  }
-
-  Map<String, dynamic> _getMapFromString(String jsonString){
-    return json.decode(json.decode(jsonString));
-  }
-
-  String _generateRandomString(int length) {
-    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    final random = Random();
-    return String.fromCharCodes(Iterable.generate(
-      length,
-          (_) => characters.codeUnitAt(random.nextInt(characters.length)),
-    ));
-  }
-
-  String _getColorForPokemonType(String type) {
-    switch (type) {
-      case 'normal':
-        return '0xffA8A77A'; // Khaki
-      case 'fire':
-        return '0xffEE8130'; // Orange
-      case 'water':
-        return '0xff6390F0'; // Light Blue
-      case 'electric':
-        return '0xffF7D02C'; // Yellow
-      case 'grass':
-        return '0xff7AC74C'; // Green
-      case 'ice':
-        return '0xff96D9D6'; // Light Cyan
-      case 'fighting':
-        return '0xffC22E28'; // Dark Red
-      case 'poison':
-        return '0xffA33EA1'; // Purple
-      case 'ground':
-        return '0xffE2BF65'; // Sandy Brown
-      case 'flying':
-        return '0xffA98FF3'; // Light Purple
-      case 'psychic':
-        return '0xffF95587'; // Magenta
-      case 'bug':
-        return '0xffA6B91A'; // Olive
-      case 'rock':
-        return '0xffB6A136'; // Dark Khaki
-      case 'ghost':
-        return '0xff735797'; // Medium Slate Blue
-      case 'dragon':
-        return '0xff6F35FC'; // Indigo
-      case 'dark':
-        return '0xff705746'; // Dark Brown
-      case 'steel':
-        return '0xffB7B7CE'; // Light Steel Blue
-      case 'fairy':
-        return '0xffD685AD'; // Light Pink
-      case 'shadow':
-        return '0xff2F4F4F'; // Dark Slate Gray
-      default:
-        return '0xffA8A878'; // Default Khaki
-    }
   }
 }

@@ -17,9 +17,4 @@ class AuthPageEndpoint extends Endpoint {
     PageUriMapping? page = await PageUriMapping.db.findFirstRow(session, where: (table)=>table.pageUri.equals((session as MethodCallSession).endpointName));
     return jsonDecode(jsonDecode(page!.pageData));
   }
-
-  @override
-  String get name {
-    return 'auth-page';
-  }
 }
