@@ -1,6 +1,6 @@
 # pokedyn_server
 
-This is the starting point for your Serverpod server.
+This is the pokedyn server developed using serverpod.
 
 To run your server, you first need to start Postgres and Redis. It's easiest to do with Docker.
 
@@ -8,7 +8,7 @@ To run your server, you first need to start Postgres and Redis. It's easiest to 
 
 Then you can start the Serverpod server.
 
-    dart bin/main.dart
+    dart bin/main.dart --apply-migrations
 
 When you are finished, you can shut down Serverpod with `Ctrl-C`, then stop Postgres and Redis.
 
