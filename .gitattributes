@@ -1,42 +1,13 @@
-## GITATTRIBUTES
-*                                   text=auto
+# Force GitHub to recognize Dart files
+*.dart linguist-language=Dart
 
-*.dart                              text
-*.gradle                            text
-*.go                                text
-*.html                              text
-*.java                              text
-*.js                                text
-*.json                              text linguist-language=JSON-with-Comments
-*.md                                text
-*.sh                                text
-*.ts                                text
-*.txt                               text
-*.xml                               text
-*.yaml                              text
+# Force GitHub to recognize Kotlin files
+*.kt linguist-language=Kotlin
+*.kts linguist-language=Kotlin
 
-*.bat                               text eol=crlf
-*.cmd                               text eol=crlf
-*.ps1                               text eol=crlf
-*.rc                                text eol=crlf
-*.sln                               text eol=crlf
-*.props                             text eol=crlf
-*.vcxproj                           text eol=crlf
-*.vcxproj.filters                   text eol=crlf
-# Including templates
-*.sln.tmpl                          text eol=crlf
-*.props.tmpl                        text eol=crlf
-*.vcxproj.tmpl                      text eol=crlf
+# Force GitHub to recognize Swift files
+*.swift linguist-language=Swift
 
-**/example/android/**               linguist-generated
-**/example/ios/**                   linguist-generated
-**/example/linux/**                 linguist-generated
-**/example/macos/**                 linguist-generated
-**/example/windows/**               linguist-generated
-
-**/example/web/icons/**             linguist-generated
-**/example/web/*.json               linguist-generated
-**/example/web/*.png                linguist-generated
-
-**/*.g.dart                         linguist-generated
-**/*.ffi.dart                       linguist-generated
+# Force GitHub to recognize JSON files
+*.json linguist-language=JSON
+*.md  linguist-language=MD
