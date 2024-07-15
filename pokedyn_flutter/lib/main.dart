@@ -53,8 +53,8 @@ class _MyAppState extends State<MyApp> {
                 url:
                 'http://$localhost:8080/pokedynHomepage/getPage?isPageCacheEnabled=true',
                 requestType: RequestType.get,
-                sendTimeout: const Duration(seconds: 5),
-                receiveTimeout: const Duration(seconds: 5),
+                sendTimeout: const Duration(seconds: 15),
+                receiveTimeout: const Duration(seconds: 15),
               ),
               templateJsonPath: 'assets/json/shimmers/pokedyn_home_page_shimmer.json',
             );
