@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'package:pokedyn_server/src/generated/protocol.dart';
+import 'package:pokedyn_server/src/utils/map_util.dart';
 import 'package:pokedyn_server/src/utils/util.dart';
 import 'package:serverpod/serverpod.dart';
 import 'package:pokedyn_server/src/generated/widget.dart' as gen;
@@ -88,19 +89,19 @@ class PokemonDetailPageEndpoint extends Endpoint {
     _addCarouselCards(carouselJson, pokemonCarouselCardJsonString);
 
     pageJsonData['data']['children'] = [];
-    (pageJsonData['data']['children'] as List).add(carouselJson);
-    (pageJsonData['data']['children'] as List).add(_addPokemonNameCard(pokemonDetailPokemonNameJsonString));
-    (pageJsonData['data']['children'] as List).add(_addPokemonTypeRow(pokemonDetailPokemonTypeRowJsonString));
-    (pageJsonData['data']['children'] as List).add(_addPokemonBaseStatsText(pokemonDetailBaseStatsTextJsonString));
-    (pageJsonData['data']['children'] as List).add(_addPokemonStatsColumn(pokemonDetailStatsColumnJsonString, pokemonDetailStatPercentIndicatorJsonString));
+    (pageJsonData['data']['children'] as List)
+        ..add(carouselJson)
+        ..add(_addPokemonNameCard(pokemonDetailPokemonNameJsonString))
+        ..add(_addPokemonTypeRow(pokemonDetailPokemonTypeRowJsonString))
+        ..add(_addPokemonBaseStatsText(pokemonDetailBaseStatsTextJsonString))
+        ..add(_addPokemonStatsColumn(pokemonDetailStatsColumnJsonString, pokemonDetailStatPercentIndicatorJsonString));
 
+    pageJsonData.assignKeyWithRandomValues();
     return jsonEncode(pageJsonData);
   }
 
   Map<String, dynamic> _addPokemonStatsColumn(String pokemonDetailStatsColumnJsonString, String pokemonDetailStatPercentIndicatorJsonString){
-    Map<String, dynamic> pokemonDetailStatsColumnJson = Util.getMapFromString(pokemonDetailStatsColumnJsonString
-        .replaceAll("{KEY_1}", Util.generateRandomString(15))
-    );
+    Map<String, dynamic> pokemonDetailStatsColumnJson = Util.getMapFromString(pokemonDetailStatsColumnJsonString);
 
     pokemonDetailStatsColumnJson['data']['children'] = [];
 
@@ -108,11 +109,6 @@ class PokemonDetailPageEndpoint extends Endpoint {
 
     for(MapEntry<String, Map<String, dynamic>> stat in stats.entries){
       String pokemonDetailStatJsonString = pokemonDetailStatPercentIndicatorJsonString;
-
-      for(int i=1;i<=4;i++){
-        String key = '{KEY_$i}';
-        pokemonDetailStatJsonString = pokemonDetailStatJsonString.replaceAll(key, Util.generateRandomString(10));
-      }
 
       pokemonDetailStatJsonString = pokemonDetailStatJsonString
         .replaceAll('{PERCENT_VALUE_IN_DOUBLE}', ((stat.value['value'] / stat.value['maxValue']) as num).toDouble().toString())
@@ -127,32 +123,17 @@ class PokemonDetailPageEndpoint extends Endpoint {
   }
 
   Map<String, dynamic> _addPokemonBaseStatsText(String pokemonDetailBaseStatsTextJsonString){
-    Map<String, dynamic> pokemonDetailPokemonNameJson = Util.getMapFromString(pokemonDetailBaseStatsTextJsonString
-        .replaceAll("{KEY_1}", Util.generateRandomString(15))
-        .replaceAll("{KEY_2}", Util.generateRandomString(15))
-    );
-
+    Map<String, dynamic> pokemonDetailPokemonNameJson = Util.getMapFromString(pokemonDetailBaseStatsTextJsonString);
     return pokemonDetailPokemonNameJson;
   }
 
   Map<String, dynamic> _addPokemonNameCard(String pokemonDetailPokemonName){
-    Map<String, dynamic> pokemonDetailPokemonNameJson = Util.getMapFromString(pokemonDetailPokemonName
-        .replaceAll("{KEY_1}", Util.generateRandomString(15))
-        .replaceAll("{KEY_2}", Util.generateRandomString(15))
-        .replaceAll("{POKEMON_NAME}", pokemonDetail!['name'])
-    );
-
+    Map<String, dynamic> pokemonDetailPokemonNameJson = Util.getMapFromString(pokemonDetailPokemonName.replaceAll("{POKEMON_NAME}", pokemonDetail!['name']));
     return pokemonDetailPokemonNameJson;
   }
 
   Map<String, dynamic> _addPokemonTypeRow(String pokemonTypeDetailString){
-
-    for(int i=1;i<=16;i++){
-      String key = "{KEY_$i}";
-      pokemonTypeDetailString = pokemonTypeDetailString.replaceAll(key, Util.generateRandomString(15));
-    }
-
-    for(int i=1;i<=(pokemonDetail!['types'] as List).length;i++){
+    for(int i=1;i<=(pokemonDetail!['types'] as List).length;i++) {
       String key = "{POKEMON_TYPE$i}";
       String colorKey = "{POKEMON_TYPE${i}_COLOR}";
       pokemonTypeDetailString = pokemonTypeDetailString
@@ -181,14 +162,11 @@ class PokemonDetailPageEndpoint extends Endpoint {
     Map<String, dynamic> pokemonCardJson1 = Util.getMapFromString(pokemonCard1
         .replaceAll("{LINEAR_GRADIENT_AS_PER_TYPE}", mainType)
         .replaceAll('{POKEMON_OFFICIAL_ARTWORK_PNG_URL}', images[0])
-        .replaceAll('{KEY_1}', Util.generateRandomString(15))
-        .replaceAll('{KEY_2}', Util.generateRandomString(15)));
+    );
 
     Map<String, dynamic> pokemonCardJson2 = Util.getMapFromString(pokemonCard2
             .replaceAll("{LINEAR_GRADIENT_AS_PER_TYPE}", mainType)
             .replaceAll('{POKEMON_OFFICIAL_ARTWORK_PNG_URL}', images[1])
-            .replaceAll('{KEY_1}', Util.generateRandomString(15))
-            .replaceAll('{KEY_2}', Util.generateRandomString(15)),
     );
 
 

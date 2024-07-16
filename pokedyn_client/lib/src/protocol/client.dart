@@ -28,20 +28,6 @@ class EndpointAuthPage extends _i1.EndpointRef {
 }
 
 /// {@category Endpoint}
-class EndpointExample extends _i1.EndpointRef {
-  EndpointExample(_i1.EndpointCaller caller) : super(caller);
-
-  @override
-  String get name => 'example';
-
-  _i2.Future<String> hello(String name) => caller.callServerEndpoint<String>(
-        'example',
-        'hello',
-        {'name': name},
-      );
-}
-
-/// {@category Endpoint}
 class EndpointPokedynHomepage extends _i1.EndpointRef {
   EndpointPokedynHomepage(_i1.EndpointCaller caller) : super(caller);
 
@@ -93,14 +79,11 @@ class Client extends _i1.ServerpodClient {
           onSucceededCall: onSucceededCall,
         ) {
     authPage = EndpointAuthPage(this);
-    example = EndpointExample(this);
     pokedynHomepage = EndpointPokedynHomepage(this);
     pokemonDetailPage = EndpointPokemonDetailPage(this);
   }
 
   late final EndpointAuthPage authPage;
-
-  late final EndpointExample example;
 
   late final EndpointPokedynHomepage pokedynHomepage;
 
@@ -109,7 +92,6 @@ class Client extends _i1.ServerpodClient {
   @override
   Map<String, _i1.EndpointRef> get endpointRefLookup => {
         'authPage': authPage,
-        'example': example,
         'pokedynHomepage': pokedynHomepage,
         'pokemonDetailPage': pokemonDetailPage,
       };

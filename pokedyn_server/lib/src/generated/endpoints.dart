@@ -10,9 +10,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod/serverpod.dart' as _i1;
 import '../endpoints/authpage_endpoint.dart' as _i2;
-import '../endpoints/example_endpoint.dart' as _i3;
-import '../endpoints/pokedyn_homepage_endpoint.dart' as _i4;
-import '../endpoints/pokemon_detail_page_endpoint.dart' as _i5;
+import '../endpoints/pokedyn_homepage_endpoint.dart' as _i3;
+import '../endpoints/pokemon_detail_page_endpoint.dart' as _i4;
 
 class Endpoints extends _i1.EndpointDispatch {
   @override
@@ -24,19 +23,13 @@ class Endpoints extends _i1.EndpointDispatch {
           'authPage',
           null,
         ),
-      'example': _i3.ExampleEndpoint()
-        ..initialize(
-          server,
-          'example',
-          null,
-        ),
-      'pokedynHomepage': _i4.PokedynHomepageEndpoint()
+      'pokedynHomepage': _i3.PokedynHomepageEndpoint()
         ..initialize(
           server,
           'pokedynHomepage',
           null,
         ),
-      'pokemonDetailPage': _i5.PokemonDetailPageEndpoint()
+      'pokemonDetailPage': _i4.PokemonDetailPageEndpoint()
         ..initialize(
           server,
           'pokemonDetailPage',
@@ -58,30 +51,6 @@ class Endpoints extends _i1.EndpointDispatch {
         )
       },
     );
-    connectors['example'] = _i1.EndpointConnector(
-      name: 'example',
-      endpoint: endpoints['example']!,
-      methodConnectors: {
-        'hello': _i1.MethodConnector(
-          name: 'hello',
-          params: {
-            'name': _i1.ParameterDescription(
-              name: 'name',
-              type: _i1.getType<String>(),
-              nullable: false,
-            )
-          },
-          call: (
-            _i1.Session session,
-            Map<String, dynamic> params,
-          ) async =>
-              (endpoints['example'] as _i3.ExampleEndpoint).hello(
-            session,
-            params['name'],
-          ),
-        )
-      },
-    );
     connectors['pokedynHomepage'] = _i1.EndpointConnector(
       name: 'pokedynHomepage',
       endpoint: endpoints['pokedynHomepage']!,
@@ -93,7 +62,7 @@ class Endpoints extends _i1.EndpointDispatch {
             _i1.Session session,
             Map<String, dynamic> params,
           ) async =>
-              (endpoints['pokedynHomepage'] as _i4.PokedynHomepageEndpoint)
+              (endpoints['pokedynHomepage'] as _i3.PokedynHomepageEndpoint)
                   .getPage(session),
         )
       },
@@ -109,7 +78,7 @@ class Endpoints extends _i1.EndpointDispatch {
             _i1.Session session,
             Map<String, dynamic> params,
           ) async =>
-              (endpoints['pokemonDetailPage'] as _i5.PokemonDetailPageEndpoint)
+              (endpoints['pokemonDetailPage'] as _i4.PokemonDetailPageEndpoint)
                   .getPage(session),
         )
       },

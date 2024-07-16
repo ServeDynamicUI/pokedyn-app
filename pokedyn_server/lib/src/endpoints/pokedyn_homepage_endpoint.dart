@@ -3,6 +3,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:pokedyn_server/src/generated/protocol.dart';
+import 'package:pokedyn_server/src/utils/map_util.dart';
 import 'package:pokedyn_server/src/utils/util.dart';
 import 'package:serverpod/serverpod.dart';
 
@@ -32,16 +33,19 @@ class PokedynHomepageEndpoint extends Endpoint {
 
       List<Map<String, dynamic>> children = await _getPokemonListAndUpdateOffset(widget!.widgetData, limit, offset);
 
-      return jsonEncode({
+      Map<String, dynamic> paginatedMap = {
         "children": children,
         "nextUrl": offset < totalCount! ? "http://localhost:8080/pokedynHomepage/getPage?offset=$offset&limit=5" : ""
-      });
+      };
+      paginatedMap.assignKeyWithRandomValues();
+      return jsonEncode(paginatedMap);
     }
     else {
       offset = 0;
       List<Map<String, dynamic>> children = await _getPokemonListAndUpdateOffset(widget!.widgetData, limit, offset);
       pageJsonData['data']['children'] = children;
       pageJsonData['data']['nextUrl'] = offset < totalCount! ? "http://localhost:8080/pokedynHomepage/getPage?offset=$offset&limit=5" : "";
+      pageJsonData.assignKeyWithRandomValues();
       return jsonEncode(pageJsonData);
     }
   }
@@ -80,19 +84,10 @@ class PokedynHomepageEndpoint extends Endpoint {
 
   Map<String, dynamic> _getPokemonWidget(String jsonTemplate, Map<String, dynamic> pokemonData) {
     return Util.getMapFromString(jsonTemplate
-        .replaceAll('{KEY_1}', Util.generateRandomString(15))
-        .replaceAll('{KEY_2}', Util.generateRandomString(15))
         .replaceAll('{BACKEND_POKEMON_DETAIL_URL}', _getPokemonDetailPageUrl(pokemonData['id']))
         .replaceAll('{POKEMON_TYPE_BG_COLOR_AS_PER_TYPE}', Util.getColorForPokemonType(pokemonData['type']))
-        .replaceAll('{KEY_3}', Util.generateRandomString(15))
-        .replaceAll('{KEY_4}', Util.generateRandomString(15))
-        .replaceAll('{KEY_5}', Util.generateRandomString(15))
         .replaceAll('{POKEMON_IMAGE}', pokemonData['image'])
-        .replaceAll('{KEY_6}', Util.generateRandomString(15))
         .replaceAll('{POKEMON_NAME}', pokemonData['name'])
-        .replaceAll('{KEY_7}', Util.generateRandomString(15))
-        .replaceAll('{KEY_8}', Util.generateRandomString(15))
-        .replaceAll('{KEY_9}', Util.generateRandomString(15))
         .replaceAll('{POKEMON_MAIN_TYPE}', pokemonData['type']));
   }
 
