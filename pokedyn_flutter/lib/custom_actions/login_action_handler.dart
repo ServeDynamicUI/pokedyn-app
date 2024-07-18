@@ -20,9 +20,7 @@ class LoginActionHandler extends ActionHandler {
             ),
           );
         }
-        print('value1 $value');
       });
-      //SessionManagerState.instance.sessionStreamController.sink.add(SessionDeAuthenticatedEvent());
     }
   }
 }

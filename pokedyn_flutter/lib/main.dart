@@ -31,9 +31,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     navigationKey = GlobalKey<NavigatorState>();
-    // client.example.hello('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1.png').then((value){
-    //   print('value $value');
-    // });
     super.initState();
   }
   @override

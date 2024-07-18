@@ -3,7 +3,8 @@
   "data": {
     "key": "1236456",
     "appBar": {
-      "pageTitle": "Pokedyn Login"
+      "pageTitle": "Pokedyn Login",
+      "appBarGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC"
     },
     "scrollable": false,
     "mainAxisAlignment": "start",
@@ -27,12 +28,13 @@
                     "type": "dy_image",
                     "data": {
                       "key": "212226323233",
-                      "src": "assets/images/pokemon_login.png",
+                      "src": "https://w0.peakpx.com/wallpaper/998/140/HD-wallpaper-pikachu-pokemon.jpg",
                       "width": -1,
                       "height": -1,
-                      "imageType": "asset",
+                      "imageType": "network",
                       "fit": "fill",
-                      "placeholderImagePath": "assets/images/icon_placeholder.png"
+                      "placeholderImagePath": "assets/images/ic_login_placeholder.jpg",
+                      "transitionDuration": ":::3:"
                     }
                   }
                 }
@@ -43,13 +45,6 @@
                   "key": "12313",
                   "mainAxisAlignment": "end",
                   "children": [
-                    {
-                      "type": "dy_sized_box",
-                      "data": {
-                        "key": "82462842",
-                        "height": 30
-                      }
-                    },
                     {
                       "type": "dy_container",
                       "data": {
@@ -183,8 +178,15 @@
                           }
                         },
                         "action": {
-                          "actionString": "/form"
+                          "actionString": "/login"
                         }
+                      }
+                    },
+                    {
+                      "type": "dy_sized_box",
+                      "data": {
+                        "key": "82462842",
+                        "height": 150
                       }
                     }
                   ]

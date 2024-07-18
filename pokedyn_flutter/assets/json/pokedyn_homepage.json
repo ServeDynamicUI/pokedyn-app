@@ -52,8 +52,8 @@
           "child": {
             "type": "dy_container",
             "data": {
-              "key": "223236423",
-              "backgroundColor": "0xff719c8f",
+              "key": "nTxG4llzAfgFnue",
+              "containerGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC",
               "height": 350,
               "showBorder": true,
               "borderColor": "0xffffffff",
@@ -61,16 +61,16 @@
               "child": {
                 "type": "dy_column",
                 "data": {
-                  "key": "2424234",
+                  "key": "zd6C8y3RLOiXTRr",
                   "children": [
                     {
                       "type": "dy_container",
                       "data": {
-                        "key": "123123",
+                        "key": "zYuTfvGJWBcXuW5",
                         "child": {
                           "type": "dy_image",
                           "data": {
-                            "key": "212226323233",
+                            "key": "zeNXHx8CCuj3dlu",
                             "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
                             "width": 250,
                             "height": 200,
@@ -84,8 +84,8 @@
                     {
                       "type": "dy_text",
                       "data": {
-                        "key": "23242342",
-                        "text": "Bulbasaur",
+                        "key": "a3jiu8s4mdk1IzK",
+                        "text": "bulbasaur",
                         "style": {
                           "color": "0xffffffff",
                           "fontWeight": "bold",
@@ -96,15 +96,15 @@
                     {
                       "type": "dy_sized_box",
                       "data": {
-                        "key": "82462842",
+                        "key": "rJgW6Zk6YbbAADk",
                         "height": 30
                       }
                     },
                     {
                       "type": "dy_container",
                       "data": {
-                        "key": "4454545",
-                        "backgroundColor": "0xff8eaec5",
+                        "key": "Ae37DJYj3s0NT1C",
+                        "backgroundColor": "0xff7AC74C",
                         "borderRadius": 20,
                         "width": 250,
                         "padding": "10",
@@ -112,8 +112,8 @@
                         "child": {
                           "type": "dy_text",
                           "data": {
-                            "key": "454545",
-                            "text": "Type: Water",
+                            "key": "nAWlBajbvCQoaXQ",
+                            "text": "Type: grass",
                             "style": {
                               "color": "0xffffffff",
                               "fontWeight": "bold",
@@ -146,8 +146,8 @@
           "child": {
             "type": "dy_container",
             "data": {
-              "key": "353535345",
-              "backgroundColor": "0xff538796",
+              "key": "jofXwHp6Eo7Dm8Y",
+              "containerGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC",
               "height": 350,
               "showBorder": true,
               "borderColor": "0xffffffff",
@@ -155,16 +155,16 @@
               "child": {
                 "type": "dy_column",
                 "data": {
-                  "key": "2424234234",
+                  "key": "vft9aYbZQZbp56Y",
                   "children": [
                     {
                       "type": "dy_container",
                       "data": {
-                        "key": "2432424234",
+                        "key": "wrVTyPeSca0teFW",
                         "child": {
                           "type": "dy_image",
                           "data": {
-                            "key": "2423423423",
+                            "key": "CRkuwKwMrAjtwZZ",
                             "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
                             "width": 250,
                             "height": 200,
@@ -178,8 +178,8 @@
                     {
                       "type": "dy_text",
                       "data": {
-                        "key": "242423432",
-                        "text": "Ivysaur",
+                        "key": "B0yT0FmyBqlu4BF",
+                        "text": "ivysaur",
                         "style": {
                           "color": "0xffffffff",
                           "fontWeight": "bold",
@@ -190,15 +190,15 @@
                     {
                       "type": "dy_sized_box",
                       "data": {
-                        "key": "2424234",
+                        "key": "H6NbRjb8EWpdeY1",
                         "height": 30
                       }
                     },
                     {
                       "type": "dy_container",
                       "data": {
-                        "key": "24324234",
-                        "backgroundColor": "0xff8eaec5",
+                        "key": "vlasgZgXgN3f0ZP",
+                        "backgroundColor": "0xff7AC74C",
                         "borderRadius": 20,
                         "width": 250,
                         "padding": "10",
@@ -206,8 +206,8 @@
                         "child": {
                           "type": "dy_text",
                           "data": {
-                            "key": "24223424",
-                            "text": "Type: Water",
+                            "key": "ll75AYgtN9NLdlh",
+                            "text": "Type: grass",
                             "style": {
                               "color": "0xffffffff",
                               "fontWeight": "bold",
@@ -240,8 +240,8 @@
           "child": {
             "type": "dy_container",
             "data": {
-              "key": "243425345",
-              "backgroundColor": "0xff3a7f83",
+              "key": "MnspjcOMAiroUGQ",
+              "containerGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC",
               "height": 350,
               "showBorder": true,
               "borderColor": "0xffffffff",
@@ -249,16 +249,16 @@
               "child": {
                 "type": "dy_column",
                 "data": {
-                  "key": "34535345",
+                  "key": "LNHDHfHtnCtvrfr",
                   "children": [
                     {
                       "type": "dy_container",
                       "data": {
-                        "key": "35345",
+                        "key": "aqN0pzdSPf8Q9VV",
                         "child": {
                           "type": "dy_image",
                           "data": {
-                            "key": "35345345",
+                            "key": "39IrRDiIO5loMJO",
                             "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
                             "width": 250,
                             "height": 200,
@@ -272,8 +272,8 @@
                     {
                       "type": "dy_text",
                       "data": {
-                        "key": "35435345345",
-                        "text": "Venusaur",
+                        "key": "qqHjJVx3JDhzT7R",
+                        "text": "venusaur",
                         "style": {
                           "color": "0xffffffff",
                           "fontWeight": "bold",
@@ -284,15 +284,15 @@
                     {
                       "type": "dy_sized_box",
                       "data": {
-                        "key": "35435435",
+                        "key": "2SR2lQU3CmESQWb",
                         "height": 30
                       }
                     },
                     {
                       "type": "dy_container",
                       "data": {
-                        "key": "35435345345",
-                        "backgroundColor": "0xff8eaec5",
+                        "key": "WgL2aiyCEh5YfWX",
+                        "backgroundColor": "0xff7AC74C",
                         "borderRadius": 20,
                         "width": 250,
                         "padding": "10",
@@ -300,8 +300,8 @@
                         "child": {
                           "type": "dy_text",
                           "data": {
-                            "key": "35345345",
-                            "text": "Type: Water",
+                            "key": "RdaSht5Bm0Shryp",
+                            "text": "Type: grass",
                             "style": {
                               "color": "0xffffffff",
                               "fontWeight": "bold",
@@ -334,25 +334,25 @@
           "child": {
             "type": "dy_container",
             "data": {
-              "key": "23453453sgfefg",
-              "backgroundColor": "0xffeaab7f",
+              "key": "T8BhuiMFF7pXQV9",
+              "containerGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC",
               "height": 350,
               "showBorder": true,
-              "borderColor": "0xfffffff0",
+              "borderColor": "0xffffffff",
               "borderRadius": 15,
               "child": {
                 "type": "dy_column",
                 "data": {
-                  "key": "25345435dfgeg",
+                  "key": "912o1MINcdR0rxj",
                   "children": [
                     {
                       "type": "dy_container",
                       "data": {
-                        "key": "453wfwffwf3",
+                        "key": "VtAW6iDsZEXXYjB",
                         "child": {
                           "type": "dy_image",
                           "data": {
-                            "key": "sfsfsdfsdfw452435",
+                            "key": "VZ1qUpYQ3fkGi2u",
                             "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
                             "width": 250,
                             "height": 200,
@@ -366,8 +366,8 @@
                     {
                       "type": "dy_text",
                       "data": {
-                        "key": "24234324",
-                        "text": "Charmander",
+                        "key": "5sT0JtGQR7om5en",
+                        "text": "charmander",
                         "style": {
                           "color": "0xffffffff",
                           "fontWeight": "bold",
@@ -378,15 +378,15 @@
                     {
                       "type": "dy_sized_box",
                       "data": {
-                        "key": "343445",
+                        "key": "Slo9CC2rG8CQ0Bt",
                         "height": 30
                       }
                     },
                     {
                       "type": "dy_container",
                       "data": {
-                        "key": "3453455436",
-                        "backgroundColor": "0xffe27e57",
+                        "key": "qKxPyPEdFVnndBI",
+                        "backgroundColor": "0xffEE8130",
                         "borderRadius": 20,
                         "width": 250,
                         "padding": "10",
@@ -394,8 +394,8 @@
                         "child": {
                           "type": "dy_text",
                           "data": {
-                            "key": "35335345",
-                            "text": "Type: Fire",
+                            "key": "PcPjZoUMIp2w3bQ",
+                            "text": "Type: fire",
                             "style": {
                               "color": "0xffffffff",
                               "fontWeight": "bold",

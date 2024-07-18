@@ -16,8 +16,8 @@
         "child": {
           "type": "dy_container",
           "data": {
-            "key": "234255435",
-            "backgroundColor": "0xffcc6455",
+            "key": "xkGialzhbHsItEO",
+            "containerGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC",
             "height": 350,
             "showBorder": true,
             "borderColor": "0xffffffff",
@@ -25,16 +25,16 @@
             "child": {
               "type": "dy_column",
               "data": {
-                "key": "345345345345",
+                "key": "6wp3vERNCMqLFCn",
                 "children": [
                   {
                     "type": "dy_container",
                     "data": {
-                      "key": "3534535345",
+                      "key": "QqelLrd3Uu44ZqD",
                       "child": {
                         "type": "dy_image",
                         "data": {
-                          "key": "34535345345",
+                          "key": "ePmap5kTLhqVb6G",
                           "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
                           "width": 250,
                           "height": 200,
@@ -48,8 +48,8 @@
                   {
                     "type": "dy_text",
                     "data": {
-                      "key": "353453453452424",
-                      "text": "Charmeleon",
+                      "key": "LSIYIdWADUcLzQB",
+                      "text": "charmeleon",
                       "style": {
                         "color": "0xffffffff",
                         "fontWeight": "bold",
@@ -60,15 +60,15 @@
                   {
                     "type": "dy_sized_box",
                     "data": {
-                      "key": "3463564567",
+                      "key": "Z0ZQUjYGtA3ObcS",
                       "height": 30
                     }
                   },
                   {
                     "type": "dy_container",
                     "data": {
-                      "key": "3536feete",
-                      "backgroundColor": "0xffe5c8b8",
+                      "key": "ui79b9F1yKvd7jf",
+                      "backgroundColor": "0xffEE8130",
                       "borderRadius": 20,
                       "width": 250,
                       "padding": "10",
@@ -76,8 +76,8 @@
                       "child": {
                         "type": "dy_text",
                         "data": {
-                          "key": "wrwrtwrt345345345",
-                          "text": "Type: Fire",
+                          "key": "ygT88KyymwtokxR",
+                          "text": "Type: fire",
                           "style": {
                             "color": "0xffffffff",
                             "fontWeight": "bold",
@@ -110,8 +110,8 @@
         "child": {
           "type": "dy_container",
           "data": {
-            "key": "53453535",
-            "backgroundColor": "0xffd48f54",
+            "key": "Wmr39DdJxNPZvlr",
+            "containerGradient": "-1.0,0.0;1.0,0.0;0xff42A5F5,0xffAB47BC",
             "height": 350,
             "showBorder": true,
             "borderColor": "0xffffffff",
@@ -119,16 +119,16 @@
             "child": {
               "type": "dy_column",
               "data": {
-                "key": "4564576464",
+                "key": "l3EuMbYBn1VKSog",
                 "children": [
                   {
                     "type": "dy_container",
                     "data": {
-                      "key": "24242424",
+                      "key": "xVZjHZMTbWXbRLR",
                       "child": {
                         "type": "dy_image",
                         "data": {
-                          "key": "24245356efg",
+                          "key": "m1Y6l4py3rA0Mbg",
                           "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
                           "width": 250,
                           "height": 200,
@@ -142,8 +142,8 @@
                   {
                     "type": "dy_text",
                     "data": {
-                      "key": "4535345etert",
-                      "text": "Charizard",
+                      "key": "AoM4B4zmFmGKvhe",
+                      "text": "charizard",
                       "style": {
                         "color": "0xffffffff",
                         "fontWeight": "bold",
@@ -154,15 +154,15 @@
                   {
                     "type": "dy_sized_box",
                     "data": {
-                      "key": "345435345efgert",
+                      "key": "Uq097KhVg73RLKu",
                       "height": 30
                     }
                   },
                   {
                     "type": "dy_container",
                     "data": {
-                      "key": "3534534534",
-                      "backgroundColor": "0xffd7c290",
+                      "key": "UQDIwTvjwuLEgMp",
+                      "backgroundColor": "0xffEE8130",
                       "borderRadius": 20,
                       "width": 250,
                       "padding": "10",
@@ -170,8 +170,8 @@
                       "child": {
                         "type": "dy_text",
                         "data": {
-                          "key": "345345435dget",
-                          "text": "Type: Fire",
+                          "key": "gxZpc9wt0RVUDZL",
+                          "text": "Type: fire",
                           "style": {
                             "color": "0xffffffff",
                             "fontWeight": "bold",
