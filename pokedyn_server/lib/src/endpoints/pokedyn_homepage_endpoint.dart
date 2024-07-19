@@ -2,17 +2,19 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:pokedyn_server/src/constants/string_constants.dart';
 import 'package:pokedyn_server/src/generated/protocol.dart';
 import 'package:pokedyn_server/src/utils/map_util.dart';
+import 'package:pokedyn_server/src/utils/pokemon_util.dart';
 import 'package:pokedyn_server/src/utils/util.dart';
 import 'package:serverpod/serverpod.dart';
-
 import 'package:pokedyn_server/src/generated/widget.dart' as gen;
 
 class PokedynHomepageEndpoint extends Endpoint {
   int offset = 0;
   final int limit = 10;
   int? totalCount;
+  late Session session;
 
   @override
   bool get requireLogin {
@@ -20,6 +22,7 @@ class PokedynHomepageEndpoint extends Endpoint {
   }
 
   Future<String> getPage(Session session) async {
+    this.session = session;
     Map<String, dynamic> queryParams = (session as MethodCallSession).queryParameters;
 
     PageUriMapping? page = await PageUriMapping.db.findFirstRow(session, where: (table)=>table.pageUri.equals((session).endpointName));
@@ -28,14 +31,14 @@ class PokedynHomepageEndpoint extends Endpoint {
     PageWidgetMapping? pageWidgetMapping = await PageWidgetMapping.db.findFirstRow(session, where: (table)=>table.pageId.equals(page.pageId));
     gen.Widget? widget = await gen.Widget.db.findFirstRow(session, where: (table)=>table.widgetId.equals(pageWidgetMapping!.widgetId));
 
-    if(queryParams.containsKey('offset')){
-      offset = int.parse(queryParams['offset']);
+    if(queryParams.containsKey(StringConstants.offset)){
+      offset = int.parse(queryParams[StringConstants.offset]);
 
       List<Map<String, dynamic>> children = await _getPokemonListAndUpdateOffset(widget!.widgetData, limit, offset);
 
       Map<String, dynamic> paginatedMap = {
-        "children": children,
-        "nextUrl": offset < totalCount! ? "http://localhost:8080/pokedynHomepage/getPage?offset=$offset&limit=5" : ""
+        StringConstants.children: children,
+        StringConstants.nextUrl: offset < totalCount! ? "http://localhost:8080/pokedynHomepage/getPage?offset=$offset&limit=5" : ""
       };
       paginatedMap.assignKeyWithRandomValues();
       return jsonEncode(paginatedMap);
@@ -43,8 +46,8 @@ class PokedynHomepageEndpoint extends Endpoint {
     else {
       offset = 0;
       List<Map<String, dynamic>> children = await _getPokemonListAndUpdateOffset(widget!.widgetData, limit, offset);
-      pageJsonData['data']['children'] = children;
-      pageJsonData['data']['nextUrl'] = offset < totalCount! ? "http://localhost:8080/pokedynHomepage/getPage?offset=$offset&limit=5" : "";
+      pageJsonData[StringConstants.data][StringConstants.children] = children;
+      pageJsonData[StringConstants.data][StringConstants.nextUrl] = offset < totalCount! ? "http://localhost:8080/pokedynHomepage/getPage?offset=$offset&limit=5" : "";
       pageJsonData.assignKeyWithRandomValues();
       return jsonEncode(pageJsonData);
     }
@@ -60,40 +63,36 @@ class PokedynHomepageEndpoint extends Endpoint {
     print(Uri.parse('https://pokeapi.co/api/v2/pokemon?limit=$limit&offset=$offset'));
     final response = await http.get(Uri.parse('https://pokeapi.co/api/v2/pokemon?limit=$limit&offset=$offset'));
     final data = jsonDecode(response.body);
-    final pokemonList = data['results'];
-    totalCount ??= data['count'];
+    final pokemonList = data[StringConstants.results];
+    totalCount ??= data[StringConstants.count];
     List<Map<String, dynamic>> paginatedJsonList = [];
 
     for (var pokemon in pokemonList) {
-      final Uri pokemonUri = Uri.parse(pokemon['url']);
-      final pokemonDetailResponse = await http.get(pokemonUri);
-      final pokemonDetail = jsonDecode(pokemonDetailResponse.body);
+      final Uri pokemonUri = Uri.parse(pokemon[StringConstants.url]);
+      String pokemonId = PokemonUtil.getPokemonId(pokemonUri);
 
-      Map<String, dynamic> pokemonData = {
-        'name': pokemonDetail['name'],
-        'type': pokemonDetail['types'][0]['type']['name'],
-        'image': pokemonDetail['sprites']['other']['official-artwork']['front_default'],
-        'id': _getPokemonId(pokemonUri)
-      };
-
+      late PokemonData pokemonData;
+      PokemonData? pokemonDataModel = await session.caches.local.get<PokemonData>('pokemon$pokemonId');
+      if(pokemonDataModel != null){
+        pokemonData = pokemonDataModel;
+      }
+      else{
+        pokemonData = await PokemonUtil.getPokemonData(pokemonId);
+        session.caches.local.put('${StringConstants.pokemon}${pokemonData.id}', pokemonData, lifetime: Duration(minutes: 5));
+      }
       paginatedJsonList.add(_getPokemonWidget(widgetJsonString, pokemonData));
     }
 
     return paginatedJsonList;
   }
 
-  Map<String, dynamic> _getPokemonWidget(String jsonTemplate, Map<String, dynamic> pokemonData) {
+  Map<String, dynamic> _getPokemonWidget(String jsonTemplate, PokemonData pokemonData) {
     return Util.getMapFromString(jsonTemplate
-        .replaceAll('{BACKEND_POKEMON_DETAIL_URL}', _getPokemonDetailPageUrl(pokemonData['id']))
-        .replaceAll('{POKEMON_TYPE_BG_COLOR_AS_PER_TYPE}', Util.getColorForPokemonType(pokemonData['type']))
-        .replaceAll('{POKEMON_IMAGE}', pokemonData['image'])
-        .replaceAll('{POKEMON_NAME}', pokemonData['name'])
-        .replaceAll('{POKEMON_MAIN_TYPE}', pokemonData['type']));
-  }
-
-  String _getPokemonId(Uri uri){
-    List<String> segments = uri.pathSegments;
-    return segments.elementAt(segments.length-2);
+        .replaceAll(StringConstants.backendPokemonDetailUrlReplacer, _getPokemonDetailPageUrl(pokemonData.id))
+        .replaceAll(StringConstants.pokemonTypeBgColorAsPerTypeReplacer, PokemonUtil.getColorForPokemonType(pokemonData.types[0]))
+        .replaceAll(StringConstants.pokemonImageReplacer, pokemonData.images[0])
+        .replaceAll(StringConstants.pokemonNameReplacer, pokemonData.name)
+        .replaceAll(StringConstants.pokemonMainTypeReplacer, pokemonData.types[0]));
   }
 
   String _getPokemonDetailPageUrl(String id){

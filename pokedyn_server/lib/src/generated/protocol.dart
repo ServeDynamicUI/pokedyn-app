@@ -11,14 +11,14 @@ library protocol; // ignore_for_file: no_leading_underscores_for_library_prefixe
 
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:serverpod/protocol.dart' as _i2;
-import 'example.dart' as _i3;
-import 'page_uri_mapping.dart' as _i4;
-import 'page_widget_mapping.dart' as _i5;
+import 'page_uri_mapping.dart' as _i3;
+import 'page_widget_mapping.dart' as _i4;
+import 'pokemon_data.dart' as _i5;
 import 'widget.dart' as _i6;
 import 'widget_widget_mapping.dart' as _i7;
-export 'example.dart';
 export 'page_uri_mapping.dart';
 export 'page_widget_mapping.dart';
+export 'pokemon_data.dart';
 export 'widget.dart';
 export 'widget_widget_mapping.dart';
 
@@ -233,14 +233,14 @@ class Protocol extends _i1.SerializationManagerServer {
     Type? t,
   ]) {
     t ??= T;
-    if (t == _i3.Example) {
-      return _i3.Example.fromJson(data) as T;
+    if (t == _i3.PageUriMapping) {
+      return _i3.PageUriMapping.fromJson(data) as T;
     }
-    if (t == _i4.PageUriMapping) {
-      return _i4.PageUriMapping.fromJson(data) as T;
+    if (t == _i4.PageWidgetMapping) {
+      return _i4.PageWidgetMapping.fromJson(data) as T;
     }
-    if (t == _i5.PageWidgetMapping) {
-      return _i5.PageWidgetMapping.fromJson(data) as T;
+    if (t == _i5.PokemonData) {
+      return _i5.PokemonData.fromJson(data) as T;
     }
     if (t == _i6.Widget) {
       return _i6.Widget.fromJson(data) as T;
@@ -248,14 +248,14 @@ class Protocol extends _i1.SerializationManagerServer {
     if (t == _i7.WidgetWidgetMapping) {
       return _i7.WidgetWidgetMapping.fromJson(data) as T;
     }
-    if (t == _i1.getType<_i3.Example?>()) {
-      return (data != null ? _i3.Example.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i3.PageUriMapping?>()) {
+      return (data != null ? _i3.PageUriMapping.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i4.PageUriMapping?>()) {
-      return (data != null ? _i4.PageUriMapping.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i4.PageWidgetMapping?>()) {
+      return (data != null ? _i4.PageWidgetMapping.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i5.PageWidgetMapping?>()) {
-      return (data != null ? _i5.PageWidgetMapping.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i5.PokemonData?>()) {
+      return (data != null ? _i5.PokemonData.fromJson(data) : null) as T;
     }
     if (t == _i1.getType<_i6.Widget?>()) {
       return (data != null ? _i6.Widget.fromJson(data) : null) as T;
@@ -263,6 +263,19 @@ class Protocol extends _i1.SerializationManagerServer {
     if (t == _i1.getType<_i7.WidgetWidgetMapping?>()) {
       return (data != null ? _i7.WidgetWidgetMapping.fromJson(data) : null)
           as T;
+    }
+    if (t == List<String>) {
+      return (data as List).map((e) => deserialize<String>(e)).toList()
+          as dynamic;
+    }
+    if (t == Map<String, Map<String, String>>) {
+      return (data as Map).map((k, v) => MapEntry(
+              deserialize<String>(k), deserialize<Map<String, String>>(v)))
+          as dynamic;
+    }
+    if (t == Map<String, String>) {
+      return (data as Map).map((k, v) =>
+          MapEntry(deserialize<String>(k), deserialize<String>(v))) as dynamic;
     }
     if (t == Map<String, dynamic>) {
       return (data as Map).map((k, v) =>
@@ -276,14 +289,14 @@ class Protocol extends _i1.SerializationManagerServer {
 
   @override
   String? getClassNameForObject(Object data) {
-    if (data is _i3.Example) {
-      return 'Example';
-    }
-    if (data is _i4.PageUriMapping) {
+    if (data is _i3.PageUriMapping) {
       return 'PageUriMapping';
     }
-    if (data is _i5.PageWidgetMapping) {
+    if (data is _i4.PageWidgetMapping) {
       return 'PageWidgetMapping';
+    }
+    if (data is _i5.PokemonData) {
+      return 'PokemonData';
     }
     if (data is _i6.Widget) {
       return 'Widget';
@@ -296,14 +309,14 @@ class Protocol extends _i1.SerializationManagerServer {
 
   @override
   dynamic deserializeByClassName(Map<String, dynamic> data) {
-    if (data['className'] == 'Example') {
-      return deserialize<_i3.Example>(data['data']);
-    }
     if (data['className'] == 'PageUriMapping') {
-      return deserialize<_i4.PageUriMapping>(data['data']);
+      return deserialize<_i3.PageUriMapping>(data['data']);
     }
     if (data['className'] == 'PageWidgetMapping') {
-      return deserialize<_i5.PageWidgetMapping>(data['data']);
+      return deserialize<_i4.PageWidgetMapping>(data['data']);
+    }
+    if (data['className'] == 'PokemonData') {
+      return deserialize<_i5.PokemonData>(data['data']);
     }
     if (data['className'] == 'Widget') {
       return deserialize<_i6.Widget>(data['data']);
@@ -323,10 +336,10 @@ class Protocol extends _i1.SerializationManagerServer {
       }
     }
     switch (t) {
-      case _i4.PageUriMapping:
-        return _i4.PageUriMapping.t;
-      case _i5.PageWidgetMapping:
-        return _i5.PageWidgetMapping.t;
+      case _i3.PageUriMapping:
+        return _i3.PageUriMapping.t;
+      case _i4.PageWidgetMapping:
+        return _i4.PageWidgetMapping.t;
       case _i6.Widget:
         return _i6.Widget.t;
       case _i7.WidgetWidgetMapping:

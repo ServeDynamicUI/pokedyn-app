@@ -1,0 +1,9 @@
+class: PokemonData
+fields:
+  name: String
+  id: String
+  images: List<String>
+  types: List<String>
+  weight: double
+  height: double
+  stats: Map<String, Map<String, String>>
